@@ -1,0 +1,97 @@
+appId: com.saucelabs.mydemoapp.android
+---
+- launchApp
+
+# --- ETAPA 1: LOGIN ---
+- tapOn: "View menu"
+- tapOn: "Log In"
+
+- assertVisible:
+    id: "nameET"
+
+- tapOn:
+    id: "nameET"
+- inputText: "bod@example.com"
+
+- tapOn:
+    id: "passwordET"
+- inputText: "10203040"
+
+- tapOn:
+    id: "loginBtn"
+
+- assertVisible: "Products"
+
+- tapOn:
+    id: "productIV"
+
+- tapOn:
+    id: "colorIV"
+    index: 1
+
+- tapOn:
+    id: "cartBt"
+
+- tapOn:
+    id: "cartIV"
+
+- assertVisible:
+    id: "cartRL"
+
+- tapOn:
+    id: "cartBt"
+
+
+- tapOn:
+    id: "fullNameET"
+- inputText: "Paulo Degang"
+
+- tapOn:
+    id: "address1ET"
+- inputText: "Mandorley 112"
+
+- tapOn:
+    id: "address2ET"
+- inputText: "Bela Vista - SJ"
+
+- tapOn:
+    id: "cityET"
+- inputText: "Floripa"
+
+- tapOn:
+    id: "stateET"
+- inputText: "SC"
+
+- tapOn:
+    id: "zipET"
+- inputText: "88110798"
+
+- tapOn:
+    id: "countryET"
+- inputText: "Brazil"
+
+- tapOn:
+    id: "paymentBtn"
+
+- tapOn:
+    id: "nameET"
+- inputText: "Paulo Degang"
+
+- tapOn:
+    id: "cardNumberET"
+- inputText: "325812657568723"
+
+- tapOn:
+    id: "expirationDateET"
+- inputText: "03/25"
+
+- tapOn:
+    id: "securityCodeET"
+- inputText: "123"
+
+- tapOn:
+    id: "paymentBtn"
+
+- assertVisible: "Place Order"
+- tapOn: "Place Order"
+- assertVisible: "Checkout Complete"
