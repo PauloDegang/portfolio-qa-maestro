@@ -1,0 +1,19 @@
+appId: com.saucelabs.mydemoapp.android
+---
+- launchApp:
+    clearState: true
+
+
+# --- ETAPA 1: LOGIN ---
+- tapOn: "View menu"
+- tapOn: "Log In"
+- assertVisible:
+    id: "nameET"
+- tapOn:
+    id: "nameET"
+- inputText: "bod@example.com"
+- tapOn:
+    id: "passwordET"
+- inputText: "10203040"
+- tapOn:
+    id: "loginBtn"

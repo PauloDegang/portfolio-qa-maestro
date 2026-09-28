@@ -1,0 +1,22 @@
+appId: com.saucelabs.mydemoapp.android
+---
+
+- launchApp:
+    clearState: true
+
+# -- TENTATIVA DE LOGIN COM SENHA INCORRETA --
+- tapOn: "View menu"
+- tapOn: "Log In"
+- assertVisible:
+    id: "nameET"
+- tapOn:
+    id: "nameET"
+- inputText: "bod@example.com"
+- tapOn:
+    id: "passwordET"
+- inputText: "senhaerrada123"
+- hideKeyboard
+- tapOn:
+    id: "loginBtn"
+
+- assertVisible: "Provided credentials do not match any user in this service.*"

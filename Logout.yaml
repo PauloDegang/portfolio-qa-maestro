@@ -1,0 +1,9 @@
+appId: com.saucelabs.mydemoapp.android
+---
+
+- runFlow: "Login.yaml"
+- tapOn: "View menu"
+- assertVisible: "Log Out"
+- tapOn: "Log Out"
+- tapOn: "LOGOUT"
+- assertVisible: "Login"
